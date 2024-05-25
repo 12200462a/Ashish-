@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+ 
+    <link href="Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            <left><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAw1BMVEVHcEyyCRayCRatCxayCRayCBazCBayCRayCRarDxayCRayCRazCBayCRayCBavChayCBayCRayCBayCRa0CBWyCRayCRZLOiKyCRayCBapDxeyCRayCRawCRayCRayCRYBUSm0CBWyCBYCUSkCUSkCUSmyCRayCBayCRYBUikCUSmyCRayCRayCBYCUSkBUSkCUSkOTSgBUSkBUSmyCRYBUSkBUSkCUSkUSicBUikCUSkCUSkCUSl6IBxYLiCyCRYCUSkiOyFcAAAAP3RSTlMAKO0KFNoY/PcCzkYvP4NY8pnm0x9zegSiwAbITWxlkgsOqUiGnlKvNh+1sl6N6dtiK4/HuK1Vd35pEvg2g0Dto++5AAADe0lEQVRIx91W2XaiQBAFhDT7piCgCCju+65JZpr//6qpbrZoNMmcM0/TL4l0X+rWrVvVMMz/vqQGD6sh/fT8i+J6fhOW77nKy/fnG1okiLhaohBpja8JKWMT3y1zrHxBsBV9AlBQ1HqG0DoVn87Scft2BepojxFGdaRpJIQla1VZ2cZDBFfuy2zxKHAqDPcAo1QxhJpF4Fiua3UI0FbuEWwzz9Rfhur9XjLyCVv2rhz9PM3u4yLwFsK4f7u3QARxeCpm4mGMFjcekWkSEFpqBcWz9iCmAXLLtASQ5aN7egSBQnLC7xXPpusNeZlj5KF1ONH7ENanQche0uEUJo7jNjN428EbdNdZUD0UkM1P6rJTnxwoJQcL6mm/H54G+yuTLCPX0SfkuQplM2v5dSrXmLqP72D/9z5bzc7pthGNl3qUF3FCXqtXBTtQSPHbEHF/e92lg2mgo6bl6bkeBqqIkBQF4kQ9qfVc0oAT4GKPC5koRCg1IzSRWzbF9SJg5JBfXUT8OC2KHRGnlc4gYszL0r7u179MbBq0vkgIj8PSAdAaYmm0EcJoVCY2eMsuIIetMapsKa1Ntp7WxauOAcSurLJ7y3bJGErd7cwhu2GWbUrn2jUEODf54v94ts/ODAskTNo2w2xVMWti1C0rKeZSkJTj4Wz1DmKBiMQ/zCabHduVsGJZS5ajUsRpej69no9HED/oI5tGma6PKRNPt9s2EZZj64jYgb9plq3TazqAeI4YKbZPEtwNN6fZejVsMyGu+UvQXzJsv+5Wq9llADx64oFnFuIYTkw35+EqW7/TBulXEw3w2AJ52tvBiXTJiBOAqKRjL2Gk7WU2S7dMw8JFenn5YVQgr9JZs02ijARaLyEv0glMi7SyXY+FgHZ+01WpzdQmzYzOkMJHrEPbth/UPdbN5xXngW1aPrZK9yicSDpREfIZ2v04YObFUGQZfo79usdDxEHBrXx3fjNitHxUgu0MLEzq50GEPanh5xxuB7OUNyZIwi5vxiIfTuh0IS14d2ckOTXr4Y1AM50nnyYsvSnkiTrRlK6x6IWh48IKDUWlDDrs53epVEeOM0URofo+QqJJgsjqo/isj58un31yFVviY4BoPb2YA0N+hJCN4Ks735HR7XkkO9/d/bzhCdW9bAqewf/ka+RF6+mW51l6T3uR/uYzRvqH30R/ABPZpnSocojRAAAAAElFTkSuQmCC"/></left>
+            @Html.ActionLink("Food", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Reservation", "Index", "Reservations", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Menu", "Index", "MenuItems", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+      
+  
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

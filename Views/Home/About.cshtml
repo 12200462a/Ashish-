@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "About Us";
+    ViewBag.Message = "Learn more about our company, our mission, and our team.";
+}
+<main aria-labelledby="page-title" class="about-page">
+    <header class="about-header">
+        <h1 id="page-title">@ViewBag.Title</h1>
+        <p class="about-message">@ViewBag.Message</p>
+    </header>
+
+    <section class="about-section">
+        <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+        <h2 class="about-subtitle">Our Mission</h2>
+        <p>At <strong>Eataly</strong>, our mission is to provide top-notch solutions and services that empower businesses to achieve their goals. We are dedicated to innovation, excellence, and delivering value to our clients.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section class="about-section">
+        <div class="about-icon"><i class="fas fa-eye"></i></div>
+        <h2 class="about-subtitle">Our Vision</h2>
+        <p>We envision a world where technology and creativity come together to create groundbreaking solutions. Our vision is to be a global leader in our industry, renowned for our commitment to quality and customer satisfaction.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section class="about-section">
+        <div class="about-icon"><i class="fas fa-users"></i></div>
+        <h2 class="about-subtitle">Our Team</h2>
+        <p>Our team is composed of highly skilled professionals who are passionate about what they do. We believe in fostering a collaborative and inclusive environment where everyone's ideas are valued and innovation thrives.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section class="about-section">
+        <div class="about-icon"><i class="fas fa-envelope"></i></div>
+        <h2 class="about-subtitle">Contact Us</h2>
+        <p>We would love to hear from you! If you have any questions or would like to learn more about our services, please <a href="/contact">contact us</a>.</p>
+    </section>
+
+    <div class="cta-section">
+        <h2>Ready to get started?</h2>
+        <p>Reach out to us today and let's discuss how we can help your business grow.</p>
+        <a href="/contact" class="cta-button">Contact Us</a>
+    </div>
+</main>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .about-message {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .about-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .about-section:hover .about-icon {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+    .about-page {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+    }
+
+    .divider {
+        border: 0;
+        height: 1px;
+        background: #ddd;
+        margin: 20px 0;
+    }
+
+    .cta-section {
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
